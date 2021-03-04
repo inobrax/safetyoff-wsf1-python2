@@ -1,4 +1,4 @@
-﻿# SAFETYOFF V1.1 (versão para Linux Python)
+# SAFETYOFF V1.1 (versão para Linux Python)
 Desenvolvido por **SOLNAX Soluções em Internet das Coisas**.
 
 ### Requisitos e Informações
@@ -15,15 +15,18 @@ Para melhor exemplificação, vamos utilizar um nome genérico para o usuário d
 
 1. Faça o download do arquivo através do repositório GitHub ou pelo comando:
 ```
-wget -c https://github.com/inobrax/nsi-safetyoff-job-v1.git
+wget https://github.com/inobrax/safetyoff-wsf1-python2/raw/main/safetyoff-wsfp-1.zip
 ```
 2. Extraia os arquivos em uma pasta de sua escolha, recomendamos a pasta do usuário (**/home/NOME-DO-USUARIO**) 
+```
+unzip safetyoff-wsfp-1.zip
+```
 
 ### Preparação para instalação
 
 1. Abra o Terminal e navegue até a pasta extraída feito no passo anterior, dentro desta pasta deverão conter 3 arquivos, sendo um deles um arquivo com a extensão “.tar.gz”, para navegar até a paste utilize o comando:
 ```
-cd /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main
+cd safetyoff-wsfp-1
 ```
 
 2. Para checar se está dentro da pasta execute:
@@ -32,12 +35,12 @@ ls
 ```
 3. A resposta do Terminal deve ser similar a:
 ```
-Installer.sh  pyserial-3.5.tar.gz  SafetyScript.py
+installer.sh  pyserial-3.5.zip  README.md  SafetyScript.py
 ```
 
 ### Instalação do Script
 
-1. Ainda no Terminal, execute o comando de instalação do Script (Comando root, necessário colocar a senha):
+1. Após navegar até a pasta (Passo 1 da **Preparação para instalação**), execute o comando de instalação do Script (Comando root, necessário colocar a senha):
 ```
 sudo sh install.sh
 ```
@@ -69,7 +72,7 @@ sudo sh install.sh
 ```
 Role para a última linha e cole o próximo comando substituindo os caminhos quando necessário:
 ```
-@reboot sudo python /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/SafetyScript.py > /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/log.txt
+@reboot sudo python /home/NOME-DO-USUARIO/safetyoff-wsfp-1/SafetyScript.py > /home/NOME-DO-USUARIO/safetyoff-wsfp-1/log.txt
 ```
 Aperte Ctrl + x, confirme com "Y" e aperte ENTER
 
@@ -115,14 +118,14 @@ sudo crontab -e
 ```
 Apague a última linha, similar a: 
 ```
-@reboot sudo python /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/SafetyScript.py > /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/log.txt
+@reboot sudo python /home/NOME-DO-USUARIO/safetyoff-wsfp-1/SafetyScript.py > /home/NOME-DO-USUARIO/safetyoff-wsfp-1/log.txt
 ```
 Aperte Ctrl + x, confirme com "Y" e aperte ENTER
 
-2. Exclua a pasta "nsi-safetyoff-job-v1-main" manualmente ou através do comando:
+2. Exclua a pasta (**safetyoff-wsfp-1**) e o arquivo zip (**safetyoff-wsfp-1**) manualmente ou através dos comandos:
 ```
-cd /home/NOME-DO-USUARIO
-sudo rm -r nsi-safetyoff-job-v1-main
+sudo rm -r safetyoff-wsfp-1
+sudo rm safetyoff-wsfp-1.zip
 ```
 
 
