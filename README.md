@@ -1,27 +1,27 @@
-# SAFETYOFF V1.1 (versão para Linux Python)
+﻿# SAFETYOFF V1.1 (versão para Linux Python)
 Desenvolvido por **SOLNAX Soluções em Internet das Coisas**.
 
 ### Requisitos e Informações
 
 Softwares previamente instalados:
 
-Python 2.X (Qualquer versão do Python 2, geralmente já instalado junto ao sistema Linux)
+**Python 2.X** (Qualquer versão do Python 2, geralmente já instalado junto ao sistema Linux)
 
-Para melhor exemplificação, vamos utilizar um nome genérico para o usuario do sistema, chamaremos de NOME-DO-USUARIO, em todos os passos que aparecerem esse texto, substituia pelo nome do usuario da maquina que está utilizando.
+Para melhor exemplificação, vamos utilizar um nome genérico para o usuário do sistema, chamaremos de NOME-DO-USUARIO, em todos os passos que contiverem este texto, substitua pelo nome do usuário da máquina que está utilizando.
 
 
 
 ### Download do SAFETYOFF V1
 
-1. Faça o download do arquivo atraves do repositorio GitHub ou pelo comando:
+1. Faça o download do arquivo através do repositório GitHub ou pelo comando:
 ```
 wget -c https://github.com/inobrax/nsi-safetyoff-job-v1.git
 ```
-2. Extraia os arquivos em um pasta de sua escolha, recomendamos a pasta do usuario (/home/NOME-DO-USUARIO) 
+2. Extraia os arquivos em uma pasta de sua escolha, recomendamos a pasta do usuário (**/home/NOME-DO-USUARIO**) 
 
 ### Preparação para instalação
 
-1. Abra o Terminal e navegue até a pasta extraida feito no passo anterior, dentro desta pasta deverão conter 2 arquivos e uma pasta, para navegar até a paste utilize o comando:
+1. Abra o Terminal e navegue até a pasta extraída feito no passo anterior, dentro desta pasta deverão conter 3 arquivos, sendo um deles um arquivo com a extensão “.tar.gz”, para navegar até a paste utilize o comando:
 ```
 cd /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main
 ```
@@ -32,17 +32,17 @@ ls
 ```
 3. A resposta do Terminal deve ser similar a:
 ```
-Installer.sh  pyserial-3.5  SafetyScript.py
+Installer.sh  pyserial-3.5.tar.gz  SafetyScript.py
 ```
 
 ### Instalação do Script
 
-1. Ainda no Terminal, execução o comando de instalação do Script (Comando root, necessario colocar a senha):
+1. Ainda no Terminal, execute o comando de instalação do Script (Comando root, necessário colocar a senha):
 ```
 sudo sh install.sh
 ```
 
-2. Responda o Terminal caso seja feita alguma pergunta sobre instalação utilizando a letra "Y" .
+2. Responda o Terminal caso seja feita alguma pergunta sobre instalação utilizando a letra "Y”.
 
 3. No fim da instalação, aparecerá um texto no Terminal parecido com:
 ```
@@ -67,17 +67,17 @@ sudo sh install.sh
 #
 
 ```
-Role para a ultima linha e cole o proximo comando substituindo os caminhos quando necessário:
+Role para a última linha e cole o próximo comando substituindo os caminhos quando necessário:
 ```
 @reboot sudo python /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/SafetyScript.py > /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/log.txt
 ```
 Aperte Ctrl + x, confirme com "Y" e aperte ENTER
 
-4. Realize o SHUTDOWN ou o REBOOT de maneira manual , e confira se o processo está iniciando sozinho com o seguinte comando:
+4. Realize o SHUTDOWN ou o REBOOT de maneira manual, e confira se o processo está iniciando sozinho com o seguinte comando:
 ```
 sudo crontab -l
 ```
-A resposta deve ser parecida com (repare sempre as ultimas linhas):
+A resposta deve ser parecida com (repare sempre as últimas linhas):
 ```
 # Edit this file to introduce tasks to be run by cron.
 # 
@@ -105,7 +105,7 @@ A resposta deve ser parecida com (repare sempre as ultimas linhas):
 @reboot sudo python /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/SafetyScript.py > /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/log.txt
 ```
 
-Outra maneira de confirmar, é entrar na pasta que foi extraida no inicio e verificar a existencia de um novo arquivo chamado "log.txt"
+Outra maneira de confirmar, é entrar na pasta que foi extraída no início e verificar a existência de um novo arquivo chamado "log.txt"
 
 ### Desinstalação do processo do SAFETYOFF V1
 
@@ -113,16 +113,17 @@ Outra maneira de confirmar, é entrar na pasta que foi extraida no inicio e veri
 ```
 sudo crontab -e
 ```
-apague a ultima linha, similar a: 
+Apague a última linha, similar a: 
 ```
 @reboot sudo python /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/SafetyScript.py > /home/NOME-DO-USUARIO/nsi-safetyoff-job-v1-main/log.txt
 ```
-Aperte Ctrl + x , confirme com "Y" e aperte ENTER
+Aperte Ctrl + x, confirme com "Y" e aperte ENTER
 
 2. Exclua a pasta "nsi-safetyoff-job-v1-main" manualmente ou através do comando:
 ```
 cd /home/NOME-DO-USUARIO
 sudo rm -r nsi-safetyoff-job-v1-main
 ```
+
 
 
