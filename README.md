@@ -48,7 +48,7 @@ installer.sh  pyserial-3.5.zip  README.md  SafetyScript.py
 
 1. Após navegar até a pasta (Passo 1 da **Preparação para instalação**), execute o comando de instalação do Script (Comando root, necessário colocar a senha):
 ```
-sudo sh install.sh
+sudo sh installer.sh
 ```
 
 2. Responda o Terminal caso seja feita alguma pergunta sobre instalação utilizando a letra "Y”.
