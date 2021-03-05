@@ -13,11 +13,17 @@ Para melhor exemplificação, vamos utilizar um nome genérico para o usuário d
 
 ### Download do SAFETYOFF V1
 
-1. Faça o download do arquivo através do repositório GitHub ou pelo comando:
+1. Para certificar que o Linux está o mais atualizado possivel, utilize o comando:
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+2. Faça o download do arquivo através do repositório GitHub ou pelo comando:
 ```
 wget https://github.com/inobrax/safetyoff-wsf1-python2/raw/main/safetyoff-wsfp-1.zip
 ```
-2. Extraia os arquivos em uma pasta de sua escolha, recomendamos a pasta do usuário (**/home/NOME-DO-USUARIO**) 
+3. Extraia os arquivos em uma pasta de sua escolha, recomendamos a pasta do usuário (**/home/NOME-DO-USUARIO**) 
 ```
 unzip safetyoff-wsfp-1.zip
 ```
